@@ -54,35 +54,15 @@ subprojects {
         implementation 'org.mapstruct:mapstruct-processor:1.5.3.Final'
         implementation 'org.modelmapper:modelmapper:3.1.0'
 
-        // jwt
-//    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.1'
-//    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.1'
-//    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.1'
-
-        // Database
-        runtimeOnly 'com.h2database:h2'
-//    runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
-        runtimeOnly 'mysql:mysql-connector-java'
-//    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-//    runtimeOnly 'org.postgresql:postgresql'
-
-        // QueryDsl
-        // for QueryDSL
-        implementation "com.querydsl:querydsl-core:${queryDslVersion}"
-        implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
-        annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}:jpa"
-        annotationProcessor "jakarta.persistence:jakarta.persistence-api"
-        annotationProcessor "jakarta.annotation:jakarta.annotation-api"
-
         // Spring
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-        implementation 'org.springframework.boot:spring-boot-starter-security'
         implementation 'org.springframework.boot:spring-boot-starter-web'
 
-        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-        testImplementation 'org.springframework.security:spring-security-test'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        // h2
+        implementation 'com.h2database:h2:2.1.212'
 
+        implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+        annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
     }
 }
 
